@@ -1,3 +1,7 @@
+Sabater, Cassandra Jo T. 
+Thay, Jerrel Chadler O.
+
+
 ![performance_checking-10](https://github.com/user-attachments/assets/3aa5cf96-9a60-4263-88d5-618c22aa765e)
 Number of Rows: 10
 
