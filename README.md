@@ -1,85 +1,34 @@
-# LBYARCH-MP2
+![performance_checking-10](https://github.com/user-attachments/assets/3aa5cf96-9a60-4263-88d5-618c22aa765e)
+Number of Rows: 10
 
-**Introduction**
+Execution Time: 1.600000 microseconds 
 
-A car's peformance is usually measured using an acceleration test with a 1KM distance. Some cars are measured from a cold start (they start at 0KM/H), some are tested from a hot start (the car is running at a stable speed and then accelerates).
+Average run time: 0.053333 microseconds
 
-Factors that are needed to compute acceleration (m/s<sup>2</sup>):
 
-1. Initial Velocity (V<sub>i</sub>) - starting speed.
+![performance_checking-100](https://github.com/user-attachments/assets/6f3bc953-a441-43e4-b97e-e68029bf84cb)
+Number of Rows: 100
 
-2. Final Velocity (V<sub>f</sub>) - final speed at the target distance (1KM).
+Execution Time: 8.800000 microseconds
 
-3. Time (T) - the total time consumed to reach 1KM.
+Average run time: 0.293333 microseconds
 
-The formula for acceleration is:
 
-Acceleration = (V<sub>f</sub> - V<sub>i</sub>)/T
+![performance_checking-1000](https://github.com/user-attachments/assets/c5cb9e40-18c6-4007-8cde-6c8baf5010ad)
+Number of Rows: 1000
 
-Sample Computation:
+Execution Time: 80.900000 microseconds
 
-Vi = 62.5 KM/H
+Average run time: 2.696667 microseconds
 
-Vf = 0.0 KM/H
 
-T = 10.1 s
+![performance_checking-10000](https://github.com/user-attachments/assets/a8857cbd-1619-4f56-8514-86aa8694ed81)
+Number of Rows: 10000
 
-Acceleration  = (62.5KM/H - 0.0KM/H) / 10.1s
+Execution Time: 801.600000 microseconds
 
- $~~~~~~~~~~~$ = (62.5KM/H) / 10.1s
+Average run time: 26.720000 microseconds
 
- $~~~~~~~~~~~$ = Convert KM/H to m/s
+To record the time of execution, the Windows.h library was used to record the time in microseconds. The reason why execution times are very fast is because assembly did most of the heavy lifting in the compuational portion of the code. C is a higher-level language and in terms of execution times assembly would be faster as there are less convertions/translations required to make assmbly code into machine code unlike C. 
 
- $~~~~~~~~~~~$ = ([62.5KM/H * 1000M/H] * 1m/3600s )/ 10.1s
-
- $~~~~~~~~~~~$ = (17.36M/s) / 10.1s
-
- $~~~~~~~~~~~$ = 1.7188 m/s<sup>2</sup>
-
- $~~~~~~~~~~~$ = convert to int (1.7188m/s<sup>2</sup>) = 2 m/s<sup>2</sup>
-
- 
-
-**Task**
-
-Implement a program that computes for the acceleration of multiple cars stored in a Y by 3 matrix. Where Y is the number of cars. All inputs are in single floating point.
-
-The output acceleration for each will be converted into Integers.
-
-Each row will indicate Initial Velocity (in KM/H), Final Velocity (in KM/H), and Time (in Seconds).
-
-Sample Matrix:
-
-0.0, 62.5, 10.1
-
-60.0, 122.3, 5.5
-
-30.0, 160.7, 7.8
-
-*Required to use functional scalar SIMD registers
-
-*Required to use functional scalar SIMD floating-point instructions
-
-**Input:** Matrix Rows, single float matrix values
-
-Example.
-
-3
-
-0.0, 62.5, 10.1
-
-60.0, 122.3, 5.5
-
-30.0, 160.7, 7.8
-
- 
-
-**Output:** Integer acceleration values (m/s<sup>2</sup>)
-
-Example.
-
-2
-
-3
-
-5
+As for the performance of the code, it is observed that there is a linear relationship between input size and execution time as the input size increases by a factor of 10, the execution time also increases by a factor of 10.
