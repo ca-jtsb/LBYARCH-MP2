@@ -29,6 +29,6 @@ Execution Time: 801.600000 microseconds
 
 Average run time: 26.720000 microseconds
 
-To record the time of execution, the Windows.h library was used to record the time in microseconds. The reason why execution times are very fast is because assembly did most of the heavy lifting in the compuational portion of the code. C is a higher-level language and in terms of execution times assembly would be faster as there are less convertions/translations required to make assmbly code into machine code unlike C. 
+To record the time of execution, the Windows.h library was used to record the time in microseconds. The reason why execution times are very fast is because assembly did most of the heavy lifting in the computational portion of the code. C is a higher-level language and in terms of execution times assembly would be faster as there are less convertions/translations required to make assmbly code into machine code unlike C. 
 
 As for the performance of the code, it is observed that there is a linear relationship between input size and execution time as the input size increases by a factor of 10, the execution time also increases by a factor of 10.
